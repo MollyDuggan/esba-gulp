@@ -28,7 +28,7 @@ module.exports = function(gulp, config) {
   };
 
   // SCSS/CSS
-  require('./gulp-tasks/gulp-css.js')(gulp, config, tasks, browserSync);
+  require('./gulp-tasks/gulp-css.js')(gulp, config, tasks);
 
   // Tests
   require('./gulp-tasks/gulp-tests.js')(gulp, config, tasks);
