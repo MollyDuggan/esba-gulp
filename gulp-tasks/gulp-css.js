@@ -85,7 +85,6 @@
         sort: config.cssConfig.sassdoc.sort
       }));
     });
-
     gulp.task('clean:docs:css', 'Delete compiled CSS docs', function (done) {
       del([
         config.cssConfig.sassdoc.dest
@@ -113,11 +112,6 @@
 
     if (config.cssConfig.lint.enabled) {
       tasks.validate.push('validate:css');
-    }
-
-    if (config.cssConfig.sassdoc.enabled) {
-      tasks.compile.push('docs:css');
-      tasks.clean.push('clean:docs:css');
     }
 
     tasks.clean.push('clean:css');
